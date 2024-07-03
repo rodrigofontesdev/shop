@@ -1,12 +1,13 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Image from 'next/image'
-import Stripe from "stripe"
+import Stripe from 'stripe'
+
+import { stripe } from '@/src/libs/stripe'
 import {
   ImageContainer,
   ProductContainer,
   ProductDetails,
 } from '@/src/styles/pages/product'
-import { stripe } from '@/src/libs/stripe'
 
 type ProductProps = {
   product: {
@@ -15,10 +16,15 @@ type ProductProps = {
     imageUrl: string
     price: string
     description: string
+    defaultPriceId: string
   }
 }
 
-export default function Product({product}: ProductProps) {
+export default function Product({ product }: ProductProps) {
+  function handleBuyProduct() {
+    console.log(product.defaultPriceId)
+  }
+
   return (
     <ProductContainer>
       <ImageContainer>
@@ -34,11 +40,9 @@ export default function Product({product}: ProductProps) {
         <h1>{product.name}</h1>
         <span>{product.price}</span>
 
-        <p>
-         {product.description}
-        </p>
+        <p>{product.description}</p>
 
-        <button>Comprar agora</button>
+        <button onClick={handleBuyProduct}>Comprar agora</button>
       </ProductDetails>
     </ProductContainer>
   )
@@ -46,17 +50,17 @@ export default function Product({product}: ProductProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-      paths: [],
-      fallback: 'blocking'
-    }
+    paths: [],
+    fallback: 'blocking',
+  }
 }
 
 export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
   params,
 }) => {
-  const productId = params?.id!
+  const productId = params?.id
 
-  const product = await stripe.products.retrieve(productId, {
+  const product = await stripe.products.retrieve(productId!, {
     expand: ['default_price'],
   })
 
@@ -72,8 +76,9 @@ export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
           style: 'currency',
           currency: 'BRL',
         }).format(price.unit_amount ? price.unit_amount / 100 : 0),
-        description: product.description
-      }
+        description: product.description,
+        defaultPriceId: price.id,
+      },
     },
     revalidate: 60 * 60 * 1, // 1 hour
   }
