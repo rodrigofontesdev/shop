@@ -58,6 +58,7 @@ export default function Product({ product }: ProductProps) {
             alt={product.name}
             width={520}
             height={480}
+            priority
           />
         </ImageContainer>
 

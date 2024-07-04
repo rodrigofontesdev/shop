@@ -47,6 +47,7 @@ export default function Home({ products }: HomeProps) {
                   alt={product.name}
                   width={520}
                   height={480}
+                  priority
                 />
 
                 <footer>
