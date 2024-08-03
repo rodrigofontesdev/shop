@@ -5,8 +5,8 @@
 
 ## Prerequisites
 
-> [!IMPORTANT]
-> TODO
+- Node.js
+- Git
 
 ## Getting Started
 
@@ -25,8 +25,10 @@
 
 ## Built With
 
-> [!IMPORTANT]
-> TODO
+- Next.js
+- TypeScript
+- Stitches
+- Stripe
 
 ## License
 
