@@ -1,3 +1,5 @@
+![cover](https://github.com/user-attachments/assets/16fd9822-3090-4d14-8c33-241dad22f8be)
+
 # Ignite Shop
 
 > [!IMPORTANT]
@@ -7,6 +9,7 @@
 
 - Node.js
 - Git
+- Stripe
 
 ## Getting Started
 
@@ -15,8 +18,9 @@
 
 ## Features
 
-> [!IMPORTANT]
-> TODO
+- List products
+- Buy a product
+- Pay via Stripe Checkout
 
 ## I've Learned
 
