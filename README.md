@@ -13,14 +13,22 @@
 
 ## Getting Started
 
-> [!IMPORTANT]
-> TODO
+- Clone the repository (`git clone git@github.com:rodrigofontesdev/shop.git`)
+- Install dependencies (`npm install`)
+- Copy .env.example file (`cp .env.example .env`)
+- Add a Stripe Key to the .env file, refer to the [How to Use](#how-to-use) section
+- Run application (`npm run dev`)
 
 ## Features
 
 - List products
 - Buy a product
 - Pay via Stripe Checkout
+
+## How to Use
+
+> [!IMPORTANT]
+> TODO
 
 ## I've Learned
 
