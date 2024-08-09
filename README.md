@@ -17,7 +17,7 @@ The goal is to develop an application using the Next.js framework and understand
 - Clone the repository (`git clone git@github.com:rodrigofontesdev/shop.git`)
 - Install dependencies (`npm install`)
 - Copy .env.example file (`cp .env.example .env.local`)
-- Add Stripe public and secret keys to the .env file. refer to the [How to Use](#how-to-use) section for details
+- Add Stripe public and secret keys to the .env.local file. Refer to the [How to Use](#how-to-use) section for details
 - Run application (`npm run dev`)
 
 ## Features
@@ -30,30 +30,30 @@ The goal is to develop an application using the Next.js framework and understand
 
 ### Configure Stripe Account
 
-1. Go to https://dashboard.stripe.com, sign in to your account
-2. Change environment to **TEST MODE**, and create a new account
+1. Go to https://dashboard.stripe.com, sign in to your Stripe account
+2. Change the environment to **TEST MODE** and create a new account
 3. Go to [developers page](https://dashboard.stripe.com/test/developers), and select **"API Keys"**
-4. Copy both public and secret keys. Paste on .env.local file
+4. Copy both the public and secret keys. Paste them into the .env.local file
 
 ### Create Products
 
-Unfortunatelly, Stripe doesnt provide a manner to import products, so you have to create manually. Bellow I share with you a table with some product data that you can use, anyway fell free to create your own products, only remember to choose "one-off" payment type.
+Unfortunately, Stripe doesn't provide a way to import products, so you have to create them manually. Below, I share a table with some product data that you can use. However, feel free to create your own products, just remember to choose the **"one-off"** payment type.
 
-Go to [product catalog page](https://dashboard.stripe.com/test/products), and start to add a new product.
+Go to the [product catalog page](https://dashboard.stripe.com/test/products) and start adding a new product.
 
 | Name | Description | Image | Price | Payment |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Camiseta Igniter Aboard | Gostosas como um abraço, nossos produtos são feitos do mais puro algodão brasileiro, ideais para climas de Norte a Sul. Todas as cores são 100% algodão, exceto as cinzas-mescla que são 88% algodão e 12% poliéster. | igniter-aboard.png | 79.90 | One-off |
-| Camiseta Ignite Lab | Gostosas como um abraço, nossos produtos são feitos do mais puro algodão brasileiro, ideais para climas de Norte a Sul. Todas as cores são 100% algodão, exceto as cinzas-mescla que são 88% algodão e 12% poliéster. | ignite-lab.png| 89.90 | One-off |
-| Camiseta Maratona Explorer | Gostosas como um abraço, nossos produtos são feitos do mais puro algodão brasileiro, ideais para climas de Norte a Sul. Todas as cores são 100% algodão, exceto as cinzas-mescla que são 88% algodão e 12% poliéster. | maratona-explorer.png | 69.90 | One-off |
-| Camiseta Maratona Explorer 2.0 | Gostosas como um abraço, nossos produtos são feitos do mais puro algodão brasileiro, ideais para climas de Norte a Sul. Todas as cores são 100% algodão, exceto as cinzas-mescla que são 88% algodão e 12% poliéster. | maratona-explorer-20.png | 74.90 | One-off |
+| Camiseta Igniter Aboard | Gostosas como um abraço, nossos produtos são feitos do mais puro algodão brasileiro, ideais para climas de Norte a Sul. Todas as cores são 100% algodão, exceto as cinzas-mescla que são 88% algodão e 12% poliéster. | igniter-aboard.png | 79.90 | one-off |
+| Camiseta Ignite Lab | Gostosas como um abraço, nossos produtos são feitos do mais puro algodão brasileiro, ideais para climas de Norte a Sul. Todas as cores são 100% algodão, exceto as cinzas-mescla que são 88% algodão e 12% poliéster. | ignite-lab.png| 89.90 | one-off |
+| Camiseta Maratona Explorer | Gostosas como um abraço, nossos produtos são feitos do mais puro algodão brasileiro, ideais para climas de Norte a Sul. Todas as cores são 100% algodão, exceto as cinzas-mescla que são 88% algodão e 12% poliéster. | maratona-explorer.png | 69.90 | one-off |
+| Camiseta Maratona Explorer 2.0 | Gostosas como um abraço, nossos produtos são feitos do mais puro algodão brasileiro, ideais para climas de Norte a Sul. Todas as cores são 100% algodão, exceto as cinzas-mescla que são 88% algodão e 12% poliéster. | maratona-explorer-20.png | 74.90 | one-off |
 
 ### Buy a Product
 
-Once you have created the products, go back to the project homepage, select a product, click on green buy button. You will be redirected to the Stripe Checkout, fill in your email and provide a card to simulate a payment.
+Once you've created the products, return to the project homepage, select a product, and click the green "Buy" button. You will be redirected to Stripe Checkout. Fill in your email and provide a card to simulate a payment.
 
 > [!IMPORTANT]
-> To simulate a payment, Stripe provide test cards, like `4242 4242 4242 4242` for a successful transaction. See [other cards options](https://docs.stripe.com/testing?testing-method=card-numbers#cards).
+> To simulate a payment, Stripe provides test cards, such as `4242 4242 4242 4242` for a successful transaction. See [other cards options here](https://docs.stripe.com/testing?testing-method=card-numbers#cards).
 
 ## I've Learned
 
