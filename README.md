@@ -2,8 +2,9 @@
 
 # Ignite Shop
 
-> [!IMPORTANT]
-> TODO
+A t-shirt store where you can find and buy unique and stylish designs.
+
+The goal is to develop an application using the Next.js framework and understand concepts such as SPA, server-side rendering (SSR), and static site generation (SSG).
 
 ## Prerequisites
 
@@ -15,8 +16,8 @@
 
 - Clone the repository (`git clone git@github.com:rodrigofontesdev/shop.git`)
 - Install dependencies (`npm install`)
-- Copy .env.example file (`cp .env.example .env`)
-- Add a Stripe Key to the .env file, refer to the [How to Use](#how-to-use) section
+- Copy .env.example file (`cp .env.example .env.local`)
+- Add Stripe public and private keys to the .env file. refer to the [How to Use](#how-to-use) section for details
 - Run application (`npm run dev`)
 
 ## Features
