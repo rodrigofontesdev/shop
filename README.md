@@ -33,7 +33,7 @@ The goal is to develop an application using the Next.js framework and understand
 1. Go to https://dashboard.stripe.com, sign in to your Stripe account
 2. Change the environment to **TEST MODE** and create a new account
 3. Go to [developers page](https://dashboard.stripe.com/test/developers), and select **"API Keys"**
-4. Copy both the public and secret keys. Paste them into the .env.local file
+4. Copy both the **public and secret keys**. Paste them into the .env.local file
 
 ### Create Products
 
@@ -43,22 +43,27 @@ Go to the [product catalog page](https://dashboard.stripe.com/test/products) and
 
 | Name | Description | Image | Price | Payment |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Camiseta Igniter Aboard | Gostosas como um abraço, nossos produtos são feitos do mais puro algodão brasileiro, ideais para climas de Norte a Sul. Todas as cores são 100% algodão, exceto as cinzas-mescla que são 88% algodão e 12% poliéster. | igniter-aboard.png | 79.90 | one-off |
-| Camiseta Ignite Lab | Gostosas como um abraço, nossos produtos são feitos do mais puro algodão brasileiro, ideais para climas de Norte a Sul. Todas as cores são 100% algodão, exceto as cinzas-mescla que são 88% algodão e 12% poliéster. | ignite-lab.png| 89.90 | one-off |
-| Camiseta Maratona Explorer | Gostosas como um abraço, nossos produtos são feitos do mais puro algodão brasileiro, ideais para climas de Norte a Sul. Todas as cores são 100% algodão, exceto as cinzas-mescla que são 88% algodão e 12% poliéster. | maratona-explorer.png | 69.90 | one-off |
-| Camiseta Maratona Explorer 2.0 | Gostosas como um abraço, nossos produtos são feitos do mais puro algodão brasileiro, ideais para climas de Norte a Sul. Todas as cores são 100% algodão, exceto as cinzas-mescla que são 88% algodão e 12% poliéster. | maratona-explorer-20.png | 74.90 | one-off |
+| Camiseta Igniter Aboard | As soft as a hug, our products are made with the purest Brazilian cotton, perfect for climates from North to South. All colors are 100% cotton, except for the heathers which are 88% cotton and 12% polyester. | [igniter-aboard.png](/src/assets/products/igniter-aboard.png) | 79.90 | one-off |
+| Camiseta Ignite Lab | As soft as a hug, our products are made with the purest Brazilian cotton, perfect for climates from North to South. All colors are 100% cotton, except for the heathers which are 88% cotton and 12% polyester. | [ignite-lab.png](/src/assets/products/ignite-lab.png) | 89.90 | one-off |
+| Camiseta Maratona Explorer | As soft as a hug, our products are made with the purest Brazilian cotton, perfect for climates from North to South. All colors are 100% cotton, except for the heathers which are 88% cotton and 12% polyester. | [maratona-explorer.png](/src/assets/products/maratona-explorer.png) | 69.90 | one-off |
+| Camiseta Maratona Explorer 2.0 | As soft as a hug, our products are made with the purest Brazilian cotton, perfect for climates from North to South. All colors are 100% cotton, except for the heathers which are 88% cotton and 12% polyester. | [maratona-explorer-20.png](/src/assets/products/maratona-explorer-20.png) | 74.90 | one-off |
 
 ### Buy a Product
 
-Once you've created the products, return to the project homepage, select a product, and click the green "Buy" button. You will be redirected to Stripe Checkout. Fill in your email and provide a card to simulate a payment.
+Once you've created the products, return to the project homepage, select a product, and click the green **"Buy"** button. You will be redirected to Stripe Checkout, fill in your email and provide a card to simulate a payment.
 
 > [!IMPORTANT]
 > To simulate a payment, Stripe provides test cards, such as `4242 4242 4242 4242` for a successful transaction. See [other cards options here](https://docs.stripe.com/testing?testing-method=card-numbers#cards).
 
 ## I've Learned
 
-> [!IMPORTANT]
-> TODO
+- Undestand differences between SPA, SSR and SSG
+- When to choose Next.js for a project
+- Create routes using the Pages Router
+- Create API routes and how to fetch data on the server side
+- Understand the differences between `getStaticProps()`, `getStaticPaths()`, and `getServerSideProps()`
+- Image Optimization (`next/image`)
+- Metadata and SEO (`next/head`)
 
 ## Built With
 
